@@ -2,4 +2,4 @@
 
 [Virtio和Vhost介绍](https://forum.huawei.com/enterprise/zh/thread-465473.html)
 
-[https://www.cnblogs.com/huangweimin/articles/6527058.html](https://www.cnblogs.com/huangweimin/articles/6527058.html)
+[linux下网卡bonding配置](https://www.cnblogs.com/huangweimin/articles/6527058.html)
