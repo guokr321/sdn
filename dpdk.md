@@ -9,5 +9,7 @@
 [linux如何编译头文件](https://www.linuxidc.com/Linux/2015-01/111516.htm)
 
 [Linux有问必答：如何在Linux上安装内核头文件](https://linux.cn/article-4625-1.html)
+
 [hugepage设置相关总结](https://blog.csdn.net/shaoyunzhe/article/details/54614077)
+
 [查看cpu的参数](https://stephen830.iteye.com/blog/2317763)
