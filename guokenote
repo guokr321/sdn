@@ -1,5 +1,5 @@
 
- ubuntu 自动获取ip的怎么设置
+ #ubuntu 自动获取ip的怎么设置
 
 ubuntu以DHCP方式配置网卡自动获取ip
 编辑文件/etc/network/interfaces：
@@ -9,4 +9,45 @@ sudo vi /etc/network/interfaces
 auto eth0
 iface eth0 inet dhcp。
 
-ethtool -p eth0
+ethtool -p eth0这个不好
+
+
+#SSH 登录时出现如下错误：Permission denied, please try again
+
+问题描述
+当使用 SSH 登录云服务器 ECS （Elastic Compute Server） Linux 服务器时，如果是 root 用户，即便正确输入了密码，也会出现类似如下错误信息。
+
+    Permission denied, please try again.
+    SSH 服务器拒绝了密码，请再试一次。
+
+但非root用户可以正常登录，而且root用户通过 管理终端 登录也正常。
+ 
+问题原因
+服务端SSH 服务配置了禁止root用户登录策略。
+ 
+处理办法
+说明：相关策略可以提高服务器的安全性。请用户基于安全性和易用性权衡后，再确定是否需要修改相关配置。
+要解决此问题，请进行如下配置检查和修改：
+
+    通过 管理终端 进入系统。
+    通过 cat 等指令查看 /etc/ssh/sshd_config 中是否包含类似如下配置。
+    试用
+
+    PermitRootLogin no
+
+        参数说明：
+            未配置该参数，或者将参数值配置为 yes（默认情况），都允许 root 用户登录。只有显示的设置为 no 时，才会阻断 root 用户登录。
+            该参数只会影响用户的 SSH 登录，不影响用户通过 管理终端 等其它方式登录系统。
+            如果需要修改相关策略配置，在修改之前建议进行文件备份。
+            使用 vi 等编辑器，将参数值设置为 yes，或者整个删除或注释（在最开头添加 # 号）整行配置。比如：# PermitRootLogin yes。
+
+    使用如下指令重启 SSH 服务。
+    试用
+
+    service sshd restart
+
+    尝试再次使用 root 用户登录服务器。
+
+如果还有问题，可以参阅云服务器 ECS Linux SSH 无法登录问题排查指引做进一步排查分析。
+ 
+如果问题还未能解决，请联系售后技术支持。
