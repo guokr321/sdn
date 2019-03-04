@@ -13,3 +13,4 @@
 [hugepage设置相关总结](https://blog.csdn.net/shaoyunzhe/article/details/54614077)
 
 [查看cpu的参数](https://stephen830.iteye.com/blog/2317763)
+[查看linux发行版号和版本号](https://blog.csdn.net/qianghaohao/article/details/78996189)
