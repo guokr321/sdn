@@ -1,0 +1,10 @@
+
+ ubuntu 自动获取ip的怎么设置
+
+ubuntu以DHCP方式配置网卡自动获取ip
+编辑文件/etc/network/interfaces：
+sudo vi /etc/network/interfaces
+并用下面的行来替换有关eth0的行：
+# The primary network interface - use DHCP to find our address
+auto eth0
+iface eth0 inet dhcp。
