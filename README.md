@@ -11,3 +11,4 @@ David Tse 那本书很经典，观点很好，高屋建瓴。不过很难。boss
 http://www.dingwave.com/communication/index-solution.htm
 https://sice.bupt.edu.cn/szll/fwwxjyzx.htm
 这两本书实验室人手一本
+http://wanglab.sjtu.edu.cn/content.aspx?info_lb=568&flag=526
